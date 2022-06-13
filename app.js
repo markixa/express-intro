@@ -1,10 +1,11 @@
-//require exoress
-const { response } = require('express');
+//require express
 const express = require('express');
-//create the express application
+
+//create the express app
 const app = express();
 
-
+//set up static files in public folder -> public content available to the views
+app.use(express.static('public'));
 
 /* app.get('/', function (req, res) {
   res.send('Hello World');
